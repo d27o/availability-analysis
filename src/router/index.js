@@ -3,19 +3,24 @@ import { createRouter, createWebHistory } from "vue-router";
 import home from '@/pages/home.vue'
 import about from '@/pages/about.vue'
 
+const baseUrl = '/availability-analysis/'
+
 const routes = [
   {
-    path: "/",
-    component: home
+    path: '/',
+    component: home,
+    name: 'home'
   },
   {
-    path: "/about",
-    component: about
+    path: '/about',
+    component: about,
+    name: 'about'
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  base: baseUrl,
+  history: createWebHistory(baseUrl),
   routes: routes
 })
 

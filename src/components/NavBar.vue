@@ -8,10 +8,14 @@
     </div>
     <ul class="flex text-xl text-white">
       <li class="pr-3">
-        <router-link to="/">Home</router-link>
+        <button>
+          Home
+        </button>
       </li>
       <li>
-        <router-link to="/about">About</router-link>
+        <button>
+          About
+        </button>
       </li>
     </ul>
   </nav>
