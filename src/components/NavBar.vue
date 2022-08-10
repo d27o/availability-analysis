@@ -1,4 +1,21 @@
-<script setup>
+<script>
+import { useRouter } from 'vue-router'
+
+export default {
+  setup() {
+    const router = useRouter();
+
+    const goToLink = (routeName) => {
+      router.push({
+        name: routeName
+      })
+    }
+
+    return {
+      goToLink
+    }
+  }
+}     
 </script>
 
 <template>
@@ -8,12 +25,12 @@
     </div>
     <ul class="flex text-xl text-white">
       <li class="pr-3">
-        <button>
+        <button @click.prevent = "goToLink('home')">
           Home
         </button>
       </li>
       <li>
-        <button>
+        <button @click.prevent = "goToLink('about')">
           About
         </button>
       </li>

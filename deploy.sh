@@ -6,6 +6,9 @@ set -e
 # build
 npm run build
 
+# copy 404.html for hack SPA on the gh pages
+cp 404.html dist
+
 # navigate into the build output directory
 cd dist
 
